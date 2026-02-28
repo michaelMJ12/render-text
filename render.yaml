@@ -10,4 +10,4 @@ services:
       - key: DEBUG
         value: "False"
       - key: DATABASE_URL
-        value: "postgres://username:password@hostname:5432/dbname"
+        value: "postgres://text_tlmv_user:js6klxxHI7pUgLF9jjh9KjToklJbNyBX@internal-hostname:5432/text_tlmv"
