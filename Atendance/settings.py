@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-y-)(16*732m$ah*%i4lr)up@%skzbhpu8+=1+%bj2n__6(8v)q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,back-end-near.onrender.com').split(',')
 
 AUTH_USER_MODEL = 'AtendanceApp.CustomAbstractBaseUser'
 
@@ -100,6 +100,7 @@ WSGI_APPLICATION = 'Atendance.wsgi.application'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://text-three-sandy.vercel.app"
 ]
 
 
