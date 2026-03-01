@@ -3,11 +3,13 @@ services:
     name: django-backend
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn myproject.wsgi:application --bind 0.0.0.0:$PORT
+    startCommand: gunicorn Atendance.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
-      - key: DJANGO_SECRET_KEY
-        value: "your-secret-key"
+      - key: SECRET_KEY
+        value: "django-insecure-y-)(16*732m$ah*%i4lr)up@%skzbhpu8+=1+%bj2n__6(8v)q"
       - key: DEBUG
         value: "False"
       - key: DATABASE_URL
-        value: "postgres://text_tlmv_user:js6klxxHI7pUgLF9jjh9KjToklJbNyBX@internal-hostname:5432/text_tlmv"
+        value: "postgresql://text_tlmv_user:js6klxxHI7pUgLF9jjh9KjToklJbNyBX@dpg-d6hgmdc50q8c73aj1k50-a/text_tlmv"
+
+       
