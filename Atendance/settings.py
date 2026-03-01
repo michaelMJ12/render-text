@@ -28,9 +28,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y-)(16*732m$ah*%i4lr)up@%skzbhpu8+=1+%bj2n__6(8v)q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,back-end-near.onrender.com').split(',')
+ALLOWED_HOSTS = [
+    'back-end-near.onrender.com',
+    'https://back-end-near.onrender.com'
+    'http://back-end-near.onrender.com'
+    'localhost',
+    '127.0.0.1',
+    'http://127.0.0.1:8000'
+]
+# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,back-end-near.onrender.com').split(',')
 
 AUTH_USER_MODEL = 'AtendanceApp.CustomAbstractBaseUser'
 
